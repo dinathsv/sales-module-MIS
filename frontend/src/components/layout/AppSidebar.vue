@@ -1,21 +1,21 @@
 <template>
   <aside class="sidebar" :class="{ collapsed }">
     <div class="sidebar-logo">
-      <div class="logo-icon">📊</div>
+      <div class="logo-icon"><i class='bx bx-star' style='color: var(--color-primary);'></i></div>
       <span class="logo-text" v-show="!collapsed">SalesHub</span>
     </div>
 
     <nav class="sidebar-nav">
       <router-link v-for="item in navItems" :key="item.path" :to="item.path"
         class="nav-item" :class="{ active: $route.path === item.path }">
-        <span class="nav-icon">{{ item.icon }}</span>
+        <span class="nav-icon"><i :class="item.icon"></i></span>
         <span class="nav-label" v-show="!collapsed">{{ item.label }}</span>
       </router-link>
     </nav>
 
     <div class="sidebar-footer">
       <button class="nav-item" @click="collapsed = !collapsed">
-        <span class="nav-icon">{{ collapsed ? '▶' : '◀' }}</span>
+        <span class="nav-icon"><i :class="collapsed ? 'bx bx-chevron-right' : 'bx bx-chevron-left'"></i></span>
         <span class="nav-label" v-show="!collapsed">Collapse</span>
       </button>
     </div>
@@ -29,11 +29,11 @@ export default {
     return {
       collapsed: false,
       navItems: [
-        { path: '/', label: 'Dashboard', icon: '🏠' },
-        { path: '/sales', label: 'Sales', icon: '💰' },
-        { path: '/invoices', label: 'Invoices', icon: '📄' },
-        { path: '/customers', label: 'Customers', icon: '👥' },
-        { path: '/reports', label: 'Reports', icon: '📈' },
+        { path: '/', label: 'Dashboard', icon: 'bx bx-home-alt' },
+        { path: '/sales', label: 'Sales', icon: 'bx bx-dollar-circle' },
+        { path: '/invoices', label: 'Invoices', icon: 'bx bx-file-blank' },
+        { path: '/customers', label: 'Customers', icon: 'bx bx-group' },
+        { path: '/reports', label: 'Reports', icon: 'bx bx-line-chart' },
       ]
     }
   }

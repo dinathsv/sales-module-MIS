@@ -13,7 +13,7 @@
       <!-- Stats Cards -->
       <div class="stats-grid">
         <div class="card stat-card" v-for="stat in statsCards" :key="stat.label">
-          <div class="stat-icon">{{ stat.icon }}</div>
+          <div class="stat-icon"><i :class="stat.icon" style="color: var(--color-primary);"></i></div>
           <div class="stat-info">
             <span class="stat-value">{{ stat.value }}</span>
             <span class="stat-label">{{ stat.label }}</span>
@@ -109,10 +109,10 @@ export default {
       const d = useReportsStore().dashboard
       if (!d) return []
       return [
-        { icon: '💰', label: 'Total Revenue', value: `Rs. ${this.formatNumber(d.total_revenue)}`, change: d.revenue_growth ? `${d.revenue_growth > 0 ? '+' : ''}${d.revenue_growth.toFixed(1)}%` : null, changeClass: d.revenue_growth >= 0 ? 'positive' : 'negative' },
-        { icon: '📦', label: 'Total Sales', value: d.total_sales, change: d.sales_growth ? `${d.sales_growth > 0 ? '+' : ''}${d.sales_growth.toFixed(1)}%` : null, changeClass: d.sales_growth >= 0 ? 'positive' : 'negative' },
-        { icon: '⏳', label: 'Pending Orders', value: d.pending_orders },
-        { icon: '📊', label: 'Avg. Order Value', value: `Rs. ${this.formatNumber(d.average_order_value)}` },
+        { icon: 'bx bx-wallet', label: 'Total Revenue', value: `Rs. ${this.formatNumber(d.total_revenue)}`, change: d.revenue_growth ? `${d.revenue_growth > 0 ? '+' : ''}${d.revenue_growth.toFixed(1)}%` : null, changeClass: d.revenue_growth >= 0 ? 'positive' : 'negative' },
+        { icon: 'bx bx-box', label: 'Total Sales', value: d.total_sales, change: d.sales_growth ? `${d.sales_growth > 0 ? '+' : ''}${d.sales_growth.toFixed(1)}%` : null, changeClass: d.sales_growth >= 0 ? 'positive' : 'negative' },
+        { icon: 'bx bx-time-five', label: 'Pending Orders', value: d.pending_orders },
+        { icon: 'bx bx-bar-chart-square', label: 'Avg. Order Value', value: `Rs. ${this.formatNumber(d.average_order_value)}` },
       ]
     }
   },
