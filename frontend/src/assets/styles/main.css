@@ -293,7 +293,7 @@ a:hover {
   margin-bottom: 32px;
 }
 .page-header h1 { 
-  font-size: 1.25rem; 
+  font-size: 1.1rem; 
   font-weight: 600;
   margin-bottom: 4px; 
   color: var(--text-primary);
@@ -465,22 +465,22 @@ tr td.text-primary.font-medium {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-top: 0.25rem;
 }
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
 }
 .stat-icon {
-  font-size: 1.5rem;
-  width: 48px;
-  height: 48px;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
