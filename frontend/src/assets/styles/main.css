@@ -14,10 +14,10 @@
   --bg-input: #ffffff;
 
   /* Primary Brand Colors - Modern Clean Blue */
-  --color-primary: #0ea5e9; /* Light Sky Blue */
-  --color-primary-light: #38bdf8;
-  --color-primary-dark: #0284c7;
-  --color-primary-bg: #e0f2fe;
+  --color-primary: #2563eb; /* Standard Blue */
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-bg: #eff6ff;
   
   --color-secondary: #64748b;
   --color-accent: #06b6d4;
