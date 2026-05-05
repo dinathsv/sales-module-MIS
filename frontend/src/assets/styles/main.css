@@ -14,10 +14,10 @@
   --bg-input: #ffffff;
 
   /* Primary Brand Colors - Modern Clean Blue */
-  --color-primary: #4f46e5; /* Deep Indigo */
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #3730a3;
-  --color-primary-bg: #e0e7ff;
+  --color-primary: #0ea5e9; /* Light Sky Blue */
+  --color-primary-light: #38bdf8;
+  --color-primary-dark: #0284c7;
+  --color-primary-bg: #e0f2fe;
   
   --color-secondary: #64748b;
   --color-accent: #06b6d4;
@@ -293,7 +293,7 @@ a:hover {
   margin-bottom: 32px;
 }
 .page-header h1 { 
-  font-size: 1.8rem; 
+  font-size: 1.25rem; 
   font-weight: 600;
   margin-bottom: 4px; 
   color: var(--text-primary);
@@ -462,7 +462,10 @@ tr td.text-primary.font-medium {
   color: var(--color-primary-dark); /* Replace confusing primary-light text with nice dark blue link color */
 }
 .stat-value {
-  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-top: 0.25rem;
@@ -475,9 +478,9 @@ tr td.text-primary.font-medium {
   font-weight: 600;
 }
 .stat-icon {
-  font-size: 2.2rem;
-  width: 60px;
-  height: 60px;
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -212,13 +212,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 22px 24px;
+  padding: 16px 20px;
 }
 
 .stat-icon {
-  font-size: 2rem;
-  width: 50px;
-  height: 50px;
+  font-size: 1.5rem;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,7 +233,10 @@ export default {
 }
 
 .stat-value {
-  font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   animation: countUp 0.5s ease;
