@@ -7,17 +7,17 @@
 :root {
   /* Colors - Minimal & Professional */
   --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
+  --bg-secondary: #f8fafc; /* Premium Slate Gray */
   --bg-card: #ffffff;
   --bg-glass: rgba(0, 0, 0, 0.03);
   --bg-glass-hover: rgba(0, 0, 0, 0.05);
   --bg-input: #ffffff;
 
   /* Primary Brand Colors - Modern Clean Blue */
-  --color-primary: #3b82f6;
-  --color-primary-light: #60a5fa;
-  --color-primary-dark: #2563eb;
-  --color-primary-bg: #eff6ff;
+  --color-primary: #4f46e5; /* Deep Indigo */
+  --color-primary-light: #818cf8;
+  --color-primary-dark: #3730a3;
+  --color-primary-bg: #e0e7ff;
   
   --color-secondary: #64748b;
   --color-accent: #06b6d4;
@@ -33,18 +33,18 @@
   --color-info-bg: #dbeafe;
 
   /* Text Colors */
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
 
   /* Borders & Dividers */
-  --border-color: #e5e7eb;
-  --border-color-light: #f3f4f6;
+  --border-color: #e2e8f0;
+  --border-color-light: #f1f5f9;
 
   /* Shadows - Soft & Minimal */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 24px rgba(0, 0, 0, 0.04), 0 24px 48px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 15px rgba(59, 130, 246, 0.3);
 
   /* Spacing */
@@ -72,6 +72,7 @@
 }
 
 body {
+  letter-spacing: -0.01em;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -81,6 +82,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   font-weight: 600;
   line-height: 1.3;
@@ -121,8 +123,8 @@ a:hover {
   margin-bottom: 2rem;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color-light);
+  box-shadow: var(--shadow-md);
   transition: box-shadow var(--transition-fast);
   overflow: hidden;
 }
@@ -139,7 +141,7 @@ a:hover {
   padding: 0.6rem 1.25rem;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   cursor: pointer;
@@ -149,7 +151,7 @@ a:hover {
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
@@ -178,7 +180,7 @@ a:hover {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
@@ -190,11 +192,11 @@ a:hover {
   font-family: inherit;
   font-size: 0.9rem;
   background-color: var(--bg-input);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .form-input:focus,
@@ -210,7 +212,7 @@ a:hover {
   width: 100%;
   overflow-x: auto;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
 }
 
 .table {
@@ -265,7 +267,7 @@ a:hover {
   letter-spacing: 0.05em;
   background: var(--bg-secondary);
   color: var(--text-secondary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
 }
 .badge-pending { background: var(--color-warning-bg); color: var(--color-warning); border-color: rgba(245, 158, 11, 0.2); }
 .badge-completed, .badge-paid { background: var(--color-success-bg); color: var(--color-success); border-color: rgba(16, 185, 129, 0.2); }
@@ -344,11 +346,11 @@ a:hover {
   font-family: inherit;
   font-size: 0.9rem;
   background-color: var(--bg-input);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 .form-control:focus {
   outline: none;
@@ -434,7 +436,7 @@ a:hover {
 .table-container {
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   background: var(--bg-card);
   margin-top: 1.5rem;
 }
@@ -453,7 +455,7 @@ a:hover {
 .text-info { color: var(--color-info); }
 .text-center { text-align: center; }
 .font-semibold { font-weight: 600; }
-.font-medium { font-weight: 500; }
+.font-medium { font-weight: 600; }
 
 /* Additional Custom Spacing and Normalization */
 tr td.text-primary.font-medium {
@@ -470,7 +472,7 @@ tr td.text-primary.font-medium {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 .stat-icon {
   font-size: 2.2rem;
@@ -509,6 +511,7 @@ tr td.text-primary.font-medium {
 
 /* Adjustments for forms / modals */
 .modal-body {
+  letter-spacing: -0.01em;
   padding: 1.5rem;
 }
 
@@ -552,8 +555,42 @@ tr td.text-primary.font-medium {
 .table-container {
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   background: var(--bg-card);
   margin-top: 1.5rem; 
 }
 .table-container .data-table { border: 0 !important; }
+
+/* Pro Developer Overrides - Micro Interactions */
+.btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* very subtle default button shadow */
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  transition: box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+  box-shadow: var(--shadow-lg); /* Slightly elevate card on hover for interaction */
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px var(--color-primary-bg) !important;
+  border-color: var(--color-primary-light) !important;
+}
+
+.app-sidebar {
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-primary); /* keeping sidebar clean white */
+}
+.app-main {
+  background-color: var(--bg-secondary); /* ensure main body is slate-gray */
+}
